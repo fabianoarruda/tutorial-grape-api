@@ -1,0 +1,15 @@
+
+<% @vehicles.each do |v|%>
+  <div class="col-md-3 col-sm-4">
+    <div class="thumbnail">
+      <%= image_tag v.image.url(:medium) %>
+      <div class="caption">
+        <h3><%=v.model %></h3>
+        <h4><%=v.manufacturer.name%></h4>
+        <p><%=v.description%></p>
+        <p>$ <%=v.price%></p>
+        <p><%=link_to 'Show...', vehicle_path(v), class: "btn btn-primary", role: "button" %></p>
+      </div>
+    </div>
+  </div>
+<% end %>

@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  manufacturer_id: 
+  model: MyString
+  description: MyText
+  price: 1.5
+
+two:
+  manufacturer_id: 
+  model: MyString
+  description: MyText
+  price: 1.5
