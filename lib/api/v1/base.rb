@@ -6,6 +6,8 @@ module Api
       version 'v1'
       format :json
 
+      mount Manufacturers
+
     end
   end
 end
