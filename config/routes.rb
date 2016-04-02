@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   resources :vehicles
   resources :manufacturers
 
+  mount Api::V1::Base => '/'
+
   root 'catalog#index'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
