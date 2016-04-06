@@ -23,6 +23,7 @@ module Api
       end
 
       mount Manufacturers
+      mount Vehicles
 
     end
   end
