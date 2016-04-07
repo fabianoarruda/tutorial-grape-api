@@ -7,7 +7,7 @@ module Api
         desc "Return a list of manufacturers."
         get do
           manufacturers = Manufacturer.all
-          present manufacturers
+          present manufacturers, with: Entities::Manufacturer
         end
 
         desc "Return a manufacturer."
@@ -17,7 +17,7 @@ module Api
         route_param :id do
           get do
             manufacturer = Manufacturer.find(params[:id])
-            present manufacturer
+            present manufacturer, with: Entities::Manufacturer
           end
         end
 

@@ -7,7 +7,7 @@ module Api
         desc "Return a list of vehicles."
         get do
           vehicles = Vehicle.all
-          present vehicles
+          present vehicles, with: Entities::Vehicle
         end
 
         desc "Return a vehicle."
@@ -17,7 +17,7 @@ module Api
         route_param :id do
           get do
             vehicle = Vehicle.find(params[:id])
-            present vehicle
+            present vehicle, with: Entities::Vehicle
           end
         end
 
