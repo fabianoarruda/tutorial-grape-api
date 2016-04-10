@@ -21,6 +21,20 @@ module Api
           end
         end
 
+        desc "Create a new Vehicle"
+        params do
+          requires :model, type: String
+          requires :description, type: String
+          requires :manufacturer_id, type: Integer
+          optional :price, type: BigDecimal
+        end
+        post do
+          vehicle = Vehicle.new(params)
+          if vehicle.save
+            present vehicle, with: Entities::Vehicle
+          end
+        end
+
       end
     end
   end
